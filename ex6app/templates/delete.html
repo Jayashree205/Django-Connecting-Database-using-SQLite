@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <h1>KAMARAJ COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+        <h2>Web Application Using Django Framework</h2>
+        <h2><pre style="font-family: 'Times New Roman', Times, serif;">    T.Jayashree
+     [22UIT050]- III IT A
+    </pre></h2>
+    <h1>Connecting Database using SQLite</h1>
+    <h2>Delete Records</h2></center>
+    <div class="container">
+        <h1 class="mt-5">Delete Product</h1>
+        <p>Are you sure you want to delete "{{ product.name }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <a href="{% url 'product_list' %}" class="btn btn-secondary mt-3">Back to Product List</a>
+    </div>
+</body>
+</html>
